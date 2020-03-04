@@ -13,14 +13,14 @@ export default StyleSheet.create({
   listBlock: {
     width: '80%',
     height: '80%',
-    marginTop: '25px',
     borderRadius: '5px',
     overflowY: 'scroll',
+    border: '1px solid #fff',
   },
   character: {
-    width: 'calc(100% - 10px)',
-    border: '1px solid #fff',
-    borderRadius: '5px',
+    width: '100%',
+    borderTop: '1px solid #fff',
+    borderBottom: '1px solid #fff',
     color: '#fff',
     fontSize: '30px',
     marginBottom: '10px',
@@ -29,10 +29,6 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     backgroundColor: 'rgba(122, 122, 122, 0.9)',
     height: '120px',
-    // transition: '0.5s',
-    // ':hover': {
-    //   height: '300px',
-    // },
   },
   image: {
     width: '100px',

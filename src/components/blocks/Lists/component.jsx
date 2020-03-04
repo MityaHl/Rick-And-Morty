@@ -3,20 +3,31 @@ import { css } from 'aphrodite'
 
 import styles from './styles'
 
-const Lists = ({ getCharacters, list }) => {
+const Lists = ({ getCharacters, list, nextPage, putOneCharacter, prevPage, getNextPageCharacters, getLastPageCharacters }) => {
 
   useEffect(() => {
     getCharacters()
   },[])
 
+  const onGetNextPageCharacters = () => {
+    getNextPageCharacters(nextPage)
+  }
+
+  const onGetLastPageCharacters = () => {
+    getLastPageCharacters(prevPage)
+  }
+
   return (
     <div className={css(styles.lists)}>
       {
-        list.info && (
+        list[0] && (
           <div className={css(styles.listBlock)}>
             {
-              list.results.map((item, index) => (
-                <div className={css(styles.character)}>
+              list.map((item, index) => (
+                <div className={css(styles.character)} key={item.id} 
+                onClick={() => {
+                  putOneCharacter(item)
+                }}>
                   <div className={css(styles.imageBlock)}>
                     <img className={css(styles.image)} src={item.image} alt=""/>
                   </div>
@@ -36,12 +47,16 @@ const Lists = ({ getCharacters, list }) => {
         )
       }
       <div className={css(styles.buttonsBlock)}>
-        <button className={css(styles.button)}>Previous</button>
-        <div className={css(styles.numPage)}>3</div>
-        <button className={css(styles.button)}>Next</button>
+        <button className={css(styles.button)} onClick={onGetLastPageCharacters}>Previous</button>
+        <div className={css(styles.numPage)}>
+          {
+            nextPage !== undefined ? nextPage.slice(48) - 1 : 1
+          }
+        </div>
+        <button className={css(styles.button)} onClick={onGetNextPageCharacters}>Next</button>
       </div>
     </div>
   )
 }
 
-export default  Lists
+export default Lists

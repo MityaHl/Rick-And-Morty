@@ -3,8 +3,11 @@ import axios from 'axios'
 
 import { putCharacters, putInfo } from '../store/actions/characters'
 
-function allCharacters () {
-  return axios.get('/api/character', {
+function nextPageCharacters (url) {
+  if (url !== '') {
+    url = url.slice(27)
+  }
+  return axios.get(url, {
     crossDomain: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -19,16 +22,15 @@ function allCharacters () {
     )
 }
 
-function * putData () {
+function * putData (action) {
   try {
-    const characters = yield call(allCharacters)
+    const characters = yield call(nextPageCharacters, action.payload)
     yield put(putCharacters(characters.results))
-    yield put(putInfo(characters.info))
-  } catch (error) {
+    yield put(putInfo(characters.info))  } catch (error) {
     console.log(error)
   }
 }
 
-export function * watchLoad () {
-  yield takeEvery('GET_CHARACTERS', putData)
+export function * watchNextPageCharacters () {
+  yield takeEvery('GET_NEXT_PAGE_CHARACTERS', putData)
 }
