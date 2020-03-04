@@ -8,7 +8,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    height: 'calc(100vh - 8vh)',
+    height: 'calc(100vh - 10vh)',
   },
   listBlock: {
     width: '80%',
@@ -29,10 +29,10 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     backgroundColor: 'rgba(122, 122, 122, 0.9)',
     height: '120px',
-    transition: '0.5s',
-    ':hover': {
-      height: '300px',
-    },
+    // transition: '0.5s',
+    // ':hover': {
+    //   height: '300px',
+    // },
   },
   image: {
     width: '100px',
