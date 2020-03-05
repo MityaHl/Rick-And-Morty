@@ -1,21 +1,25 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { css } from 'aphrodite'
 
 import styles from './styles'
 
 const OneCharacter = ({ character, characterEpisodes, getOneCharacterEpisodes }) => {
 
-  const episodes = () => {
+  const episodes = useCallback(() => {
     return character.episode.map((item, index) => {
       return item = item.slice(item.lastIndexOf('/') + 1)
     })
-  }
-  
+  })
+
   useEffect(() => {
     const arrOfEpisodes = episodes()
-    console.log(arrOfEpisodes)
     getOneCharacterEpisodes(arrOfEpisodes)
   }, [])
+
+  useEffect(() => {
+    const arrOfEpisodes = episodes()
+    getOneCharacterEpisodes(arrOfEpisodes)
+  })
 
   return (
     <div className={css(styles.oneCharacter)}>

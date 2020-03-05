@@ -14,7 +14,11 @@ function allEpisodes (episodes) {
   })
     .then(
       response => {
-        return response.data
+        if (response.data instanceof Array) {
+          return response.data
+        } else {
+          return [response.data]
+        }
       }    
     )
 }

@@ -42,7 +42,7 @@ export default StyleSheet.create({
     width: '200px',
     height: '200px',
     borderRadius: '10px',
-    '@media (max-width: 2000px)': {
+    '@media (max-width: 1900px)': {
       width: '150px',
       height: '150px',
     },
@@ -51,7 +51,7 @@ export default StyleSheet.create({
     display: 'flex',
     fontSize: '30px',
     justifyContent: 'center',
-    '@media (max-width: 2000px)': {
+    '@media (max-width: 1900px)': {
       fontSize: '20px',
     },
   },
@@ -60,7 +60,7 @@ export default StyleSheet.create({
     marginTop: '8px',
     fontSize: '17px',
     justifyContent: 'center',
-    '@media (max-width: 2000px)': {
+    '@media (max-width: 1900px)': {
       fontSize: '13px',
     },
   },
@@ -72,7 +72,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     color: '#fff',
     fontSize: '25px',
-    '@media (max-width: 2000px)': {
+    '@media (max-width: 1900px)': {
       fontSize: '17px',
     },
   },
@@ -84,7 +84,7 @@ export default StyleSheet.create({
   oneEpisode: {
     marginTop: '5px',
     marginLeft: '10px',
-    '@media (max-width: 2000px)': {
+    '@media (max-width: 1900px)': {
       fontSize: '13px',
     },
   },
