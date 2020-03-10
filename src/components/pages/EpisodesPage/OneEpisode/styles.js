@@ -1,0 +1,83 @@
+import { StyleSheet } from 'aphrodite'
+
+export default StyleSheet.create({
+  oneEpisode: {
+    float: 'right',
+    width: '35%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    height: '70vh',
+  },
+  oneEpisodeBlock: {
+    width: '80%',
+    height: '80%',
+    marginTop: '25px',
+    borderRadius: '5px',
+    overflowY: 'scroll',
+    border: '1px solid #fff',
+    backgroundColor: 'rgba(122, 122, 122, 0.9)',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  title: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: '10px',
+    marginLeft: '10px',
+    fontSize: '30px',
+    color: '#fff',
+  },
+  date: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: '20px',
+    marginLeft: '10px',
+    fontSize: '25px',
+    color: '#fff',
+  },
+  charactersTitle: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: '30px',
+    marginLeft: '10px',
+    fontSize: '20px',
+    color: '#fff',
+  },
+  charactersList: {
+    marginTop: '20px',
+  },
+  oneCharacter: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: '10px',
+    fontSize: '20px',
+    color: '#fff',
+  },
+  image: {
+    height: '70px',
+    width: '70px',
+    borderRadius: '10px',
+  },
+  imageBlock: {
+    width: '20%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  nameBlock: {
+    width: '40%',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  listItem: {
+    width: '20%',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+})

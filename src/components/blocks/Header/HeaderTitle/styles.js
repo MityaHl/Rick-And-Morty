@@ -11,6 +11,6 @@ export default StyleSheet.create({
   },
   titleText: {
     fontSize: '2rem',
-    textShadow: '#fff 1px 1px 0, #fff -1px -1px 0, #fff -1px 1px 0, #fff 1px -1px 0'
-  }
+    textShadow: '#fff 1px 1px 0, #fff -1px -1px 0, #fff -1px 1px 0, #fff 1px -1px 0',
+  },
 })

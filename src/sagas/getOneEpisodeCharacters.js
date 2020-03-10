@@ -1,10 +1,10 @@
 import { takeEvery, call, put } from 'redux-saga/effects'
 import axios from 'axios'
 
-import { putOneCharacterEpisodes } from '../store/actions/characters'
+import { putOneEpisodeCharacters } from '../store/actions/episodes'
 
-function allEpisodes (episodes) {
-  return axios.get('/api/episode/' + episodes, {
+function allCharacters (episodes) {
+  return axios.get('/api/character/' + episodes, {
     crossDomain: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -25,13 +25,13 @@ function allEpisodes (episodes) {
 
 function * putData (action) {
   try {
-    const episodes = yield call(allEpisodes, action.payload)
-    yield put(putOneCharacterEpisodes(episodes))
+    const characters = yield call(allCharacters, action.payload)
+    yield put(putOneEpisodeCharacters(characters))
   } catch (error) {
     console.log(error)
   }
 }
 
-export function * watchOneCharactersEpisodes () {
-  yield takeEvery('GET_ONE_CHARACTER_EPISODES', putData)
+export function * watchOneEpisodeCharacterss () {
+  yield takeEvery('GET_ONE_EPISODE_CHARACTERS', putData)
 }

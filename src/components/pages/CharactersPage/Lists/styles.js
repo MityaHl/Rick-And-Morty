@@ -78,5 +78,5 @@ export default StyleSheet.create({
     border: '1px solid #fff',
     borderRadius: '5px',
     backgroundColor: 'rgba(122, 122, 122, 1)',
-  }
+  },
 })

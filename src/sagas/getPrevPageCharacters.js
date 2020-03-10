@@ -18,7 +18,7 @@ function lastPageCharacters (url) {
     .then(
       response => {
         return response.data
-      }    
+      },
     )
 }
 

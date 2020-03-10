@@ -1,3 +1,3 @@
-import EpisodesPage from './component'
+import EpisodesPage from './container'
 
 export default EpisodesPage

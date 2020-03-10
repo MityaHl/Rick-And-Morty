@@ -15,7 +15,7 @@ function allCharacters () {
     .then(
       response => {
         return response.data
-      }    
+      },
     )
 }
 

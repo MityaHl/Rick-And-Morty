@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { css } from 'aphrodite'
 import { Link } from 'react-router-dom'
 
@@ -12,4 +12,4 @@ const HeaderMenu = () => (
   </div>
 )
 
-export default  HeaderMenu
+export default HeaderMenu

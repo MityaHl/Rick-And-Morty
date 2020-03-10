@@ -18,7 +18,7 @@ function nextPageCharacters (url) {
     .then(
       response => {
         return response.data
-      }    
+      },
     )
 }
 
@@ -26,7 +26,8 @@ function * putData (action) {
   try {
     const characters = yield call(nextPageCharacters, action.payload)
     yield put(putCharacters(characters.results))
-    yield put(putInfo(characters.info))  } catch (error) {
+    yield put(putInfo(characters.info))
+  } catch (error) {
     console.log(error)
   }
 }

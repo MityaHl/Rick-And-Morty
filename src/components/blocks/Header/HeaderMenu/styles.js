@@ -7,7 +7,7 @@ export default StyleSheet.create({
     height: '100%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around',    
+    justifyContent: 'space-around',
   },
   link: {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -22,6 +22,6 @@ export default StyleSheet.create({
     borderRadius: '5px',
     ':hover': {
       backgroundColor: 'grey',
-  }
+    },
   },
 })

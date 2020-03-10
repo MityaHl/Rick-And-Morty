@@ -16,7 +16,7 @@ function allEpisodes () {
     .then(
       response => {
         return response.data
-      }    
+      },
     )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { css } from 'aphrodite'
 
 import HeaderTitle from './HeaderTitle'
@@ -13,4 +13,4 @@ const Header = () => (
   </div>
 )
 
-export default  Header
+export default Header

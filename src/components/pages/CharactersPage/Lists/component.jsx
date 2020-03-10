@@ -3,12 +3,7 @@ import { css } from 'aphrodite'
 
 import styles from './styles'
 
-const Lists = ({ getCharacters, list, nextPage, putOneCharacter, prevPage, getNextPageCharacters, getLastPageCharacters }) => {
-
-  useEffect(() => {
-    getCharacters()
-  },[])
-
+const Lists = ({ list, nextPage, putOneCharacter, prevPage, getNextPageCharacters, getLastPageCharacters }) => {
   const onGetNextPageCharacters = () => {
     getNextPageCharacters(nextPage)
   }
@@ -24,12 +19,15 @@ const Lists = ({ getCharacters, list, nextPage, putOneCharacter, prevPage, getNe
           <div className={css(styles.listBlock)}>
             {
               list.map((item, index) => (
-                <div className={css(styles.character)} key={item.id} 
-                onClick={() => {
-                  putOneCharacter(item)
-                }}>
+                <div
+                  className={css(styles.character)}
+                  key={item.id}
+                  onClick={() => {
+                    putOneCharacter(item)
+                  }}
+                >
                   <div className={css(styles.imageBlock)}>
-                    <img className={css(styles.image)} src={item.image} alt=""/>
+                    <img className={css(styles.image)} src={item.image} alt="" />
                   </div>
                   <div className={css(styles.nameBlock)}>
                     {item.name}
@@ -40,7 +38,7 @@ const Lists = ({ getCharacters, list, nextPage, putOneCharacter, prevPage, getNe
                   <div className={css(styles.listItem)}>
                     {item.status}
                   </div>
-                </div>   
+                </div>
               ))
             }
           </div>

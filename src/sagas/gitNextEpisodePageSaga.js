@@ -19,7 +19,7 @@ function nextPageEpisodes (url) {
     .then(
       response => {
         return response.data
-      }    
+      },
     )
 }
 
@@ -27,7 +27,8 @@ function * putData (action) {
   try {
     const episodes = yield call(nextPageEpisodes, action.payload)
     yield put(putEpisodes(episodes.results))
-    yield put(putInfo(episodes.info))  } catch (error) {
+    yield put(putInfo(episodes.info))
+  } catch (error) {
     console.log(error)
   }
 }
